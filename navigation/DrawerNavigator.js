@@ -39,12 +39,12 @@ const CustomDrawerContent = (props) => {
                 }
                 onPress={() => setIsLogged(false)}
             />
-            <DrawerItem
-                label={'Close'}
-                icon={() => <Icon name="close" size={24} color="#551E18"/>
-                }
-                onPress={() => props.navigation.closeDrawer()}
-            />
+            {/*<DrawerItem*/}
+            {/*    label={'Close'}*/}
+            {/*    icon={() => <Icon name="close" size={24} color="#551E18"/>*/}
+            {/*    }*/}
+            {/*    onPress={() => props.navigation.closeDrawer()}*/}
+            {/*/>*/}
         </DrawerContentScrollView>
     )
 }
@@ -71,7 +71,7 @@ const DrawerNavigator = () => {
                 headerTitleAlign: "center",
                 headerTitle: () => <Image
                     style={{width: 200, height: 30}}
-                    source={require('../assets/header_image.png')}/>,
+                    source={require('../assets/header.png')}/>,
                 headerRight: () => (
                     <View style={styles.headerRight}>
                         <Icon name="bell" size={20} color="#fff"/>

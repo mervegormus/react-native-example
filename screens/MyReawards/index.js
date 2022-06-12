@@ -1,35 +1,8 @@
-import React, {useCallback, useState} from 'react';
-import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
+import React, {useCallback} from 'react';
+import {Dimensions, Image, Text, View} from "react-native";
 import CarouselComponent from "../../components/CarouselComponent";
-import MyListComponent from "../../components/MyListComponent";
 
-const slides = [
-    {
-        id: '1',
-        title: 'Lorem ipsum',
-        description: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem',
-        image: require('../../assets/image1.jpg')
-    },
-    {
-        id: '2',
-        title: 'Lorem ipsum',
-        description: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem',
-        image: require('../../assets/image2.jpg')
-    },
-    {
-        id: '3',
-        title: 'Lorem ipsum',
-        description: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem',
-        image: require('../../assets/image3.jpg')
-    },
-    {
-        id: '4',
-        title: 'Lorem ipsum',
-        description: 'Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem',
-        image: require('../../assets/image4.jpg')
-    },
-]
-const Home = () => {
+const MyRewards = () => {
     const renderItem = useCallback(({item, index}) => {
         return (
             <View
@@ -73,25 +46,11 @@ const Home = () => {
         )
     }, [])
 
-    return (<View style={styles.container}>
-            <CarouselComponent data={slides} renderItem={renderItem}/>
-            <Text style={styles.text}>Yemekler</Text>
-            <MyListComponent/>
+    return (
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor:'pink'}}>
+            <CarouselComponent renderItem={renderItem}/>
         </View>
-    );
+    )
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    text: {
-        alignSelf: "center",
-        fontSize: 18,
-        color: '#775451',
-        fontFamily: 'SourceSansPro-SemiBold',
-        marginVertical: 10
-    },
-})
-
-export default Home;
+export default MyRewards;

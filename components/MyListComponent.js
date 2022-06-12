@@ -5,11 +5,6 @@ import {MaterialCommunityIcons} from '@expo/vector-icons';
 import {View, ScrollView, StyleSheet} from "react-native";
 
 const MyListComponent = () => {
-    // const [expanded, setExpanded] = React.useState(true);
-
-    // const handlePress = () => setExpanded(!expanded);
-    // expanded={expanded}
-    // onPress={handlePress}>
     return (<View style={styles.container}>
             <ScrollView>
                 <List.Accordion

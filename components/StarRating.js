@@ -2,11 +2,11 @@ import React from 'react';
 import StarRating from "react-native-star-rating";
 import {Dimensions, StyleSheet, Text, View} from 'react-native'
 
-const StarRate = () => {
-    const [starCount, setStarCount] = React.useState(0)
-    const onStarRatingPress = (rating) => {
-        setStarCount(rating)
-    }
+const StarRate = (prop:{rate:number}) => {
+    // const [starCount, setStarCount] = React.useState(0)
+    // const onStarRatingPress = (rating) => {
+    //     setStarCount(rating)
+    // }
     return (<View style={styles.view}>
             <Text style={styles.text}>Puan</Text>
             <StarRating
@@ -17,14 +17,14 @@ const StarRate = () => {
                 iconSet={'Ionicons'}
                 maxStars={5}
                 starSize={20}
-                rating={starCount}
-                selectedStar={(rating) => onStarRatingPress(rating)}
-                fullStarColor={'#551E18'}
+                rating={prop.rate}
+                // selectedStar={(rating) => onStarRatingPress(rating)}
+                fullStarColor={'#d05a50'}
                 starStyle={{
                     marginHorizontal: 5
                 }}
             />
-            <Text style={styles.rate}>{starCount}/5</Text>
+            <Text style={styles.rate}>{prop.rate}/5</Text>
         </View>
     );
 };
